@@ -17,14 +17,14 @@ if __name__ == "__main__":
     buildOptions = dict(
         packages=[],
         excludes=[],
-        include_files=[("assets", "assets"), ("source/data", "source/data")],
+        include_files=[("gfx", "gfx")],
     )
 
     target = Executable(
         "main.py",
         base={"win": "Win32GUI", "mac": None, "linux": None}[os_family],
         targetName=NAME,
-        icon="assets/icon." + {"win": "ico", "mac": "icns", "linux": "ico"}[os_family],
+        # icon="assets/icon." + {"win": "ico", "mac": "icns", "linux": "ico"}[os_family],
         copyright="Drawmoon",
     )
 
